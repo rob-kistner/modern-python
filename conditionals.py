@@ -1,14 +1,15 @@
-# ------------------------------
-#
-# Conditionals
-#
-# ------------------------------
+""" ------------------------------
 
-from printutils import *
+    Conditionals
+
+------------------------------ """
+
+from printutils import bannerline, print_ind
 
 bannerline("Basic if/elif/else format")
-print(
-"""if <some condition> is True:
+
+print("""
+if <some condition> is True:
     do something
 elif <some other condition> is True:
     do something else

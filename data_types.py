@@ -1,10 +1,10 @@
-# ------------------------------
-#
-# Data Types
-#
-# ------------------------------
+""" ------------------------------
 
-from printutils import *
+    Data Types
+
+------------------------------ """
+
+from printutils import banner
 
 banner('Data Types')
 
@@ -35,14 +35,14 @@ A sequence of unicode characters
     myval = "An now I'm a string"
 """)
 
-# List 
+# List
 print("""
 List (list)
 An ordered sequence of other data types
 ----------------------------------------
 
     mylist1 = [0, 23, 1, 0.8, 13]
-    mylist2 = ["Michael", "Cindy", "Andy", "Joan"] 
+    mylist2 = ["Michael", "Cindy", "Andy", "Joan"]
 """)
 
 # Dictionaries
@@ -58,7 +58,7 @@ Unordered collection of key/value pairs
         "birthyear": 1969,
         "interests": ["photography", "wine", "film"]
     }
-    
+
 """)
 
 # Tuples
@@ -68,5 +68,5 @@ Immutable sequence of values
 ----------------------------------------
 
     mytuple = ("coffee", "tea", "beer")
-    
+
 """)
