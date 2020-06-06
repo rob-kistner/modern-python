@@ -8,7 +8,6 @@
 
 from printutils import bannerline
 
-
 """ ----------------------------------------
     Exponentiation
 
