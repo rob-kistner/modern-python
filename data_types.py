@@ -4,7 +4,7 @@
 
 ------------------------------ """
 
-from printutils import banner
+from modules.printutils import banner
 
 banner('Data Types')
 

@@ -50,7 +50,7 @@ def sep ( padchar="-", padlength=20 ):
         indentlength (integer, default: 4):
             number of spaces to indent
 ----------------------------------------------------- """
-def banner(s="", padchar="-", indentlength=4):
+def banner(s="", padchar="-", indentlength=4, spaced=True):
         # remove blank lines from comment and
         # split them into a list at character returns
     s_lines = s.strip().split("\n")
@@ -60,11 +60,11 @@ def banner(s="", padchar="-", indentlength=4):
         # front and back
     line_length = len(max(s_lines, key=len)) + 2 * indentlength
 
-    print()
+    if spaced: print()
     print(padchar * line_length)
     [print(" " * indentlength + line) for line in s_lines]
     print(padchar * line_length)
-    print()
+    if spaced: print()
 
 """ ----------------------------------------------------
     Print a single line banner
