@@ -49,6 +49,10 @@ def sep ( padchar="-", padlength=20 ):
 
         indentlength (integer, default: 4):
             number of spaces to indent
+        
+        spaced (bool, default: True)
+            add blank lines before and after 
+            the banner text
 ----------------------------------------------------- """
 def banner(s="", padchar="-", indentlength=4, spaced=True):
         # remove blank lines from comment and
@@ -70,7 +74,7 @@ def banner(s="", padchar="-", indentlength=4, spaced=True):
     Print a single line banner
     surrounded by characters on both sides
 
-    @params
+    args:
         s (string, required):
             the banner text to output
 
@@ -82,8 +86,6 @@ def banner(s="", padchar="-", indentlength=4, spaced=True):
 
         surround (bool, default: True):
             if true, adds a blank line to top and bottom
-
-    @returns void
 ---------------------------------------------------- """
 def bannerline ( s, char='-', amount=30, surround=True ):
     s = ' %s ' % s
