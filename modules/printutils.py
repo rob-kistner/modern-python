@@ -178,4 +178,4 @@ def expected (comment="", expected="", padchar="-", line_inset=0):
         # print separatator
     print(padchar * line_length)
         # print inset and the expected string
-    print(inset_str + expected)
+    print(f'{inset_str}{expected}')
