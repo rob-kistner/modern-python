@@ -6,8 +6,8 @@ colors = ['purple', 'teal', 'magenta', 'crimson', 'emerald']
 
 banner('The lists...')
 # ----------------------------------------
-print(numbers)
-print(colors)
+var_dump('numbers', numbers)
+var_dump('colors', colors)
 
 
 banner('For list')

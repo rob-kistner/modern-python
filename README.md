@@ -26,6 +26,11 @@ Import with: `from printutils import *`
     Outputs a character a number of times
     to make a visual separator
 
+**`print_ind(s="", indent_level=1, spaces=4)`**
+
+    Print text (s) indented 4 spaces (spaces) x
+    an indent level (indent_level)
+
 **`bannerline( s="", padchar="-", padlength=10 )`**
 
     Print a certain length line (padlength) padded
@@ -36,11 +41,12 @@ Import with: `from printutils import *`
 
     Print comment (s) with a line of characters (padchar) below
 
-**`expected(comment="", expected="", padchar="-", line_inset=0)`**
+**`big_banner(s="", padchar="-", indentlength=4)`**
 
-    Print a comment (can be multiple lines) with possible line insets,
-    then a separator line with or without inset as the length,
-    then the expected text with possible line insets
+    Outputs a 'lead-document' style decorative headline banner 
+    with character lines (padchar) the max length of the
+    text to be printed (s) at top and bottom plus spacing
+    (indentlength)
 
 **`banner(s="", padchar="-", indentlength=4)`**
 
@@ -49,7 +55,8 @@ Import with: `from printutils import *`
     text to be printed (s) at top and bottom plus spacing
     (indentlength)
 
-**`print_ind(s="", indent_level=1, spaces=4)`**
+**`expected(comment="", expected="", padchar="-", line_inset=0)`**
 
-    Print text (s) indented 4 spaces (spaces) x
-    an indent level (indent_level)
+    Print a comment (can be multiple lines) with possible line insets,
+    then a separator line with or without inset as the length,
+    then the expected text with possible line insets

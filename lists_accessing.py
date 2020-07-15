@@ -17,8 +17,8 @@ colors = ['purple', 'teal', 'orange']
 
 banner('The lists')
 # ---------------------------
-print(f'friends = {friends}')
-print(f'colors = {colors}')
+var_dump(friends)
+var_dump(colors)
 
 
 banner('Getting a single list value')

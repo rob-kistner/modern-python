@@ -34,6 +34,14 @@ def sep ( padchar="-", padlength=20 ):
     print( padchar * padlength )
 
 
+""" ----------------------------------------
+    Output the named of the variable and the 
+    variables value
+---------------------------------------- """
+def var_dump( varname, varval ):
+    print(f'{varname}: {varval}')
+
+
 """ -----------------------------------------------------
     Outputs a decorative headline banner with
     character lines (padchar) the max length of the
@@ -69,6 +77,50 @@ def banner(s="", padchar="-", indentlength=4, spaced=True):
     [print(" " * indentlength + line) for line in s_lines]
     print(padchar * line_length)
     if spaced: print()
+
+
+""" -----------------------------------------------------
+    Outputs a top-level decorative headline banner with
+    character lines (padchar) the max length of the
+    text to be printed (s) at top and bottom plus spacing
+    (indentlength) and interior vertical bars on left and right.
+
+    args:
+        s (string):
+            the text string to print
+
+        padchar (string, default: '='):
+            character to use for banner padding
+
+        indentlength (integer, default: 4):
+            number of spaces to indent
+        
+        spaced (bool, default: True)
+            add blank lines before and after 
+            the banner text
+----------------------------------------------------- """
+def big_banner(s="", padchar="*", indentlength=4, spaced=True):
+        # remove blank lines from comment and
+        # split them into a list at character returns
+    s_lines = s.strip().split("\n")
+        # also strip the individual comment lines
+    s_lines = list(map(lambda line: line.strip(), s_lines))
+        # calculate line length including line_inset on
+        # front and back
+    line_length = len(max(s_lines, key=len)) + 2 * indentlength
+        # blank line if spaced = True, followed by padchars
+    if spaced: print()
+    print(f"{padchar * (line_length+2)}")
+        # print each line with vert bars on either end
+    for line in s_lines:
+        ind = (" " * indentlength)
+        currline = padchar + ind + line
+        endspacing = line_length - len(currline) - 3
+        print(f"{padchar}{ind}{line}{ind}{endspacing * ' '}{padchar}")
+        # blank line if spaced = True, followed by padchars
+    print(f"{padchar * (line_length+2)}")
+    if spaced: print()
+
 
 """ ----------------------------------------------------
     Print a single line banner
