@@ -5,6 +5,7 @@
 #    when testing python scripts or following
 #    along with code-along tutorials.
 #
+import json # for json.dumps()
 
 """ ----------------------------
     Just print a blank line (bl)
@@ -40,6 +41,14 @@ def sep ( padchar="-", padlength=20 ):
 ---------------------------------------- """
 def var_dump( varname, varval ):
     print(f'{varname}: {varval}')
+
+
+""" ----------------------------------------
+    Print out a pretty JSON view of 
+    dict data
+---------------------------------------- """
+def jprint( data ):
+    print(json.dumps(data, indent=2))
 
 
 """ -----------------------------------------------------
