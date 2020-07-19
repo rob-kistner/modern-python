@@ -1,20 +1,36 @@
-from modules.printutils import *
+class Bird:
+    def __init__(self):
+        print("Bird is ready")
+    def whoIsThis(self):
+        print("Bird")
+    def swim(self):
+        print("Swim faster")
 
-    # to exit the script prematurely
-    # exit()
-from sys import exit
+class Penguin(Bird):
+    def __init__(self):
+        super().__init__()
+        print("Penguin is ready")
+    def whoIsThis(self):
+        print("Penguin")
+    def run(self):
+        print("Run faster")
 
-    # generate a random integer in a range
-    # randint(1,3)
-from random import randint
+class Parrot:
+    # class attribute
+    species = "bird"
 
+    def __init__(self, name, age):
+        # instance attributes
+        self.name = name
+        self.age = age
 
-# printutils
-# ----------------------------------------
-bannerline('This is a bannerline, chump')
+    def sing(self, song):
+        return f"{self.name} sings {song}"
 
-sep('-', 20)
+    def dance(self):
+        return f"{self.name} is dancing"
 
-
-
-
+peggy = Penguin()
+peggy.whoIsThis()
+peggy.swim()
+peggy.run()

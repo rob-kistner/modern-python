@@ -220,17 +220,17 @@ def print_ind(s="", indent_level=1, spaces=4):
         padchar (string, default: '-'):
         line_inset (integer, default: 0):
 ------------------------------------------------------------------ """
-def expected (comment="", expected="", padchar="-", line_inset=0):
+def expected (comment="", expected="", padchar="-", indent=0):
         # remove blank lines from comment and
         # split them into a list at character returns
     comment_lines = comment.strip().split("\n")
         # also strip the individual comment lines
     comment_lines = list(map(lambda line: line.strip(), comment_lines))
-        # calculate line length including line_inset on
+        # calculate line length including indent on
         # front and back
-    line_length = len(max(comment_lines, key=len)) + (line_inset*2)
+    line_length = len(max(comment_lines, key=len)) + (indent*2)
         # inset_str to place at beginning and end of line
-    inset_str = " " * line_inset
+    inset_str = " " * indent
 
         # blank line at the top
     print()
@@ -239,4 +239,11 @@ def expected (comment="", expected="", padchar="-", line_inset=0):
         # print separatator
     print(padchar * line_length)
         # print inset and the expected string
-    print(f'{inset_str}{expected}')
+    if type(expected) not in (tuple, dict, list):
+        print(f'{inset_str}{expected}')
+    elif type(expected) is dict:
+        print(json.dumps(expected, indent=4))
+    else:
+        for expected_item in expected:
+            print(f'{inset_str}{expected_item}')
+
