@@ -143,7 +143,7 @@ def big_banner(s="", padchar="*", indentlength=4, spaced=True):
     if spaced: print()
 
 
-def bannerline ( s, char='-', amount=30, surround=True ):
+def bannerline ( s, char='-', pad=30, surround=True ):
     """ ----------------------------------------------------
         Print a single line banner
         surrounded by characters on both sides
@@ -155,7 +155,7 @@ def bannerline ( s, char='-', amount=30, surround=True ):
             char (string, default: '-'):
                 the top / bottom line characters
 
-            amount (int, default: 30):
+            pad (int, default: 30):
                 the amount of surround characters
 
             surround (bool, default: True):
@@ -163,7 +163,7 @@ def bannerline ( s, char='-', amount=30, surround=True ):
     ---------------------------------------------------- """
     s = ' %s ' % s
     if surround: print()
-    print(s.center(len(s) + amount, char))
+    print(s.center(len(s) + pad, char))
     if surround: print()
 
 
