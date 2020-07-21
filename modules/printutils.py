@@ -9,7 +9,7 @@ import json # for json.dumps()
 
 def bl():
     """ ----------------------------
-        Just print a blank line (bl)
+        Just print a blank line
     ---------------------------- """
     print()
 
@@ -21,28 +21,17 @@ def clear():
     pass
 
 
-def sep ( padchar="-", padlength=20 ):
+def sep ( char="-", pad=20 ):
     """ -------------------------------------
         Outputs a character a number of times
-        to make a visual separator
-
-        args:
-            padchar (string, default: "-"):
-                The character to repeat
-
-            padlength (int, default: 20):
-                The amount of repeats to make
+        to make a visual separator.
     ------------------------------------- """
-    print( padchar * padlength )
+    print( char * pad )
 
 
 def pl(output):
     """ ------------------------------------
         print output following by a blank line
-
-        args:
-            output:
-                the thing to print
     ------------------------------------ """
     print(output)
     print()
@@ -63,26 +52,12 @@ def jprint( data, indent=4 ):
     print(json.dumps(data, indent=indent))
 
 
-def banner(s="", padchar="-", indentlength=4, spaced=True):
+def banner(s="", char="-", pad=4, spaced=True):
     """ -----------------------------------------------------
         Outputs a decorative headline banner with
-        character lines (padchar) the max length of the
+        character lines (char) the max length of the
         text to be printed (s) at top and bottom plus spacing
-        (indentlength)
-
-        args:
-            s (string):
-                the text string to print
-
-            padchar (string, default: '='):
-                character to use for banner padding
-
-            indentlength (integer, default: 4):
-                number of spaces to indent
-            
-            spaced (bool, default: True)
-                add blank lines before and after 
-                the banner text
+        (pad)
     ----------------------------------------------------- """
         # remove blank lines from comment and
         # split them into a list at character returns
@@ -91,12 +66,12 @@ def banner(s="", padchar="-", indentlength=4, spaced=True):
     s_lines = list(map(lambda line: line.strip(), s_lines))
         # calculate line length including line_inset on
         # front and back
-    line_length = len(max(s_lines, key=len)) + 2 * indentlength
+    line_length = len(max(s_lines, key=len)) + 2 * pad
 
     if spaced: print()
-    print(padchar * line_length)
-    [print(" " * indentlength + line) for line in s_lines]
-    print(padchar * line_length)
+    print(char * line_length)
+    [print(" " * pad + line) for line in s_lines]
+    print(char * line_length)
     if spaced: print()
 
 
@@ -106,20 +81,6 @@ def big_banner(s="", padchar="*", indentlength=4, spaced=True):
         character lines (padchar) the max length of the
         text to be printed (s) at top and bottom plus spacing
         (indentlength) and interior vertical bars on left and right.
-
-        args:
-            s (string):
-                the text string to print
-
-            padchar (string, default: '='):
-                character to use for banner padding
-
-            indentlength (integer, default: 4):
-                number of spaces to indent
-            
-            spaced (bool, default: True)
-                add blank lines before and after 
-                the banner text
     ----------------------------------------------------- """
         # remove blank lines from comment and
         # split them into a list at character returns
@@ -147,36 +108,16 @@ def bannerline ( s, char='-', pad=30, surround=True ):
     """ ----------------------------------------------------
         Print a single line banner
         surrounded by characters on both sides
-
-        args:
-            s (string, required):
-                the banner text to output
-
-            char (string, default: '-'):
-                the top / bottom line characters
-
-            pad (int, default: 30):
-                the amount of surround characters
-
-            surround (bool, default: True):
-                if true, adds a blank line to top and bottom
     ---------------------------------------------------- """
-    s = ' %s ' % s
+    s = f" {s} "
     if surround: print()
     print(s.center(len(s) + pad, char))
     if surround: print()
 
 
-def bannerhead ( s, padchar="-" ):
+def bannerhead ( s, char="-" ):
     """ -----------------------------------------------------------
-        Print comment (s) with a line of characters (padchar) below
-
-        args:
-            s (string):
-                the comment string to print
-
-            padchar (string, default: "-"):
-                the character to print as a line
+        Print comment (s) with a line of characters (char) below
     ----------------------------------------------------------- """
     s_lines = s.strip().split("\n")
     s_lines = list(map(lambda line: line.strip(), s_lines))
@@ -184,16 +125,12 @@ def bannerhead ( s, padchar="-" ):
 
     print()
     [print(line) for line in s_lines]
-    print(padchar * line_length)
+    print(char * line_length)
 
 
 def prints(output):
     """ ---------------------------------------------
         Print a string with blank lines above & below
-
-        args:
-            output (string, required):
-                the text string to print
     --------------------------------------------- """
     bl()
     print(output)
@@ -204,34 +141,15 @@ def print_ind(s="", indent_level=1, spaces=4):
     """ ----------------------------------------------------------
         Print text (s) indented
         number of spaces (spaces) x an indent level (indent_level)
-
-        args:
-            s (string):
-                the text string to print
-
-            indent_level (integer, default: 1):
-                the level multiplier for the indent,
-                number to be multiplied with spaces
-                param
-
-            spaces (integer, default: 4)
-                the base number of spaces to use for
-                the indent
     ---------------------------------------------------------- """
     print(" " * int(indent_level * spaces) + str(s))
 
 
-def expected (comment="", expected="", padchar="-", indent=0):
+def expected (comment="", expected="", char="-", indent=0):
     """ ------------------------------------------------------------------
         Print a comment (can be multiple lines) with possible line insets,
         then a separator line with or without inset as the length,
         then the expected text with possible line insets
-
-        args:
-            comment (string, default: ''):
-            expected (string, default: ''):
-            padchar (string, default: '-'):
-            line_inset (integer, default: 0):
     ------------------------------------------------------------------ """
         # remove blank lines from comment and
         # split them into a list at character returns
@@ -249,7 +167,7 @@ def expected (comment="", expected="", padchar="-", indent=0):
         # print each comment line plus the insets
     [print(inset_str + line + inset_str) for line in comment_lines]
         # print separatator
-    print(padchar * line_length)
+    print(char * line_length)
         # print inset and the expected string
     if type(expected) not in (tuple, dict, list):
         print(f'{inset_str}{expected}')
