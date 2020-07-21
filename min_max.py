@@ -32,8 +32,12 @@ banner("""
 """)
 # ----------------------------------------
 pl(names)
-pl(max(names, key=lambda n: len(n)))
-pl(min(names, key=lambda n: len(n)))
+
+outputmax = max(names, key=lambda n: len(n))
+outputmin = min(names, key=lambda n: len(n))
+
+pl(outputmax)
+pl(outputmin)
 
 
 banner("""
@@ -49,7 +53,10 @@ songs = [
 pl(min(songs, key=lambda s: s['playcount']))
     # it's a dict, so you can just pluck 
     # one piece of data to display
-pl(min(songs, key=lambda s: s['playcount'])['title'])
+
+output = min(songs, key=lambda s: s['playcount'])['title']
+
+pl(output)
 
 
 banner("Exercise 65: Extremes with min & max")
@@ -57,4 +64,6 @@ banner("Exercise 65: Extremes with min & max")
 def extremes(thelist):
     return (min(thelist), max(thelist))
 
-pl(extremes((3,6,24,1,88)))
+output = extremes((3,6,24,1,88))
+
+pl(output)
