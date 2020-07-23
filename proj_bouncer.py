@@ -2,14 +2,13 @@
 
  Bouncer code-along
 
-   • ask for age
-
-   • 18-21 : wristband
-   • 21+ : drink, normal entry
-   • too young : sorry
+   * ask for age
+   * 18-21 : wristband
+   * 21+ : drink, normal entry
+   * too young : sorry
 
 ------------------------------ """
-from printutils import *
+from modules.printutils import *
 
 myage = 12
 

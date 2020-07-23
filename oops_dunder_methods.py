@@ -1,5 +1,13 @@
 from modules.printutils import *
 
+""" ----------------------------------------
+
+    Special methods that python uses to find things
+    internally
+
+ ---------------------------------------- """
+
+
 class SpecialList:
     def __init__(self, data):
         self.__data = data
@@ -41,3 +49,24 @@ say_sup()
 
 ---------------------------------------- """
 
+
+banner("""
+Private & Protected Methods
+and name mangling
+""")
+# ------------------------------
+class Person:
+    def __init__(self):
+        self.name = "normal member"
+        self._secret = "single underscore doesn't mean anything"
+        self.__msg = "name mangled member"
+
+p = Person()
+
+    # printing members
+print(p.name)
+print(p._secret)
+    # a double underscore gets mangled, it gets changed to
+    # a class-named variable (2nd example below)
+# print(p.__msg)
+print(p._Person__msg)
