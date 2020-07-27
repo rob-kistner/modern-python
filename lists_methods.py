@@ -28,7 +28,7 @@ numbers.extend([5, 8, 10, 6, 5])
 print(f"numbers.extend([5, 8, 10, 6, 5]): {numbers.extend([5, 8, 10, 6, 5])}")
 
 
-banner('''insert()
+banner('''insert(<index>, <list item>)
 Add an item to a list at a certain position''')
 # ----------------------------------------
 numbers.insert(2, -4)

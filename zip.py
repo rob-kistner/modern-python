@@ -16,14 +16,15 @@ list1 = [1,2,3]
 list2 = [4,5,6]
 thelists = zip(list1, list2)
 
-bannerline("The lists", pad=6)
+bannerline("The lists")
+# ----------------------------------------
 print(list1)
 print(list2)
 
-bannerline("Zipped", pad=6)
+bannerline("Zipped")
+# ----------------------------------------
 for item in thelists:
     print(item)
-
 
 banner("Stops at shortest iterable")
 # ----------------------------------------
@@ -31,12 +32,12 @@ banner("Stops at shortest iterable")
 list1 = [1,2,3,4,5]
 list2 = [6,7,8]
 
-bannerline("the lists", pad=6)
+bannerline("the lists")
 print(list1)
 print(list2)
 thelists = zip(list1, list2)
 
-bannerline("zipped", pad=6)
+bannerline("zipped")
 for item in thelists:
     print(item)
 
@@ -48,12 +49,12 @@ list1 = [1,2,3]
 list2 = [6,7,8]
 list3 = ["Hi", "Howareya", "Howdy"]
 
-bannerline("The lists", pad=6)
+bannerline("The lists")
 print(list1)
 print(list2)
 print(list3)
 
-bannerline("Zipped", pad=6)
+bannerline("Zipped")
 thelists = zip(list1, list2, list3)
 for item in thelists:
     print(item)
@@ -80,16 +81,16 @@ goal: make a dict that looks like…
 final_grades = {'dan': 98, 'ang': 91, 'kate': 78}
 """
 
-bannerline("the 3 lists", pad=6)
+bannerline("the 3 lists")
 print(midterms)
 print(finals)
 print(students)
 
-bannerline("comprehension with max", pad=6)
+bannerline("comprehension with max")
 final_grades = {t[0]:max(t[1], t[2]) for t in zip(students, midterms, finals)}
 print(final_grades)
 
-bannerline("zip & map method", pad=6)
+bannerline("zip & map method")
 final_grades = dict(
     zip(
         students,
@@ -102,7 +103,7 @@ final_grades = dict(
 print(final_grades)
 
 
-bannerline("zip & map averging method", pad=6)
+bannerline("zip & map averging method")
 final_grades = dict(
     zip(
         students,

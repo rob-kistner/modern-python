@@ -1,3 +1,3 @@
-from modules.putils import banner
+import modules.putils as pu
 
-banner("Hi there")
+pu.banner("Hi")

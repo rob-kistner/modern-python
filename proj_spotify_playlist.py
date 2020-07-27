@@ -6,7 +6,8 @@ big_banner("""
 """)
 
 # ----------------------------------------
-banner("""Solution 0:
+banner("""
+    Solution 0:
     Just created the DICT completely manually.
 """)
 
@@ -124,7 +125,8 @@ print(json.dumps(playlist, indent=2))
 
 # ----------------------------------------
 playlist.clear()
-banner("""Solution 3:
+banner("""
+    Solution 3:
     This one makes the most sense, the separation of
     data and logic. That being said, it uses the 
     json library, a json file, and file io that 

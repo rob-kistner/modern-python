@@ -1,7 +1,5 @@
 """ ------------------------------
-
     Conditionals
-
 ------------------------------ """
 
 from printutils import bannerline, print_ind
