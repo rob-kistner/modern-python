@@ -1,3 +1,7 @@
+#%%
+
+# Exercise: Unlucky Numbers
+
 max = 20
 
 # A clear method, assigning reply to a variable

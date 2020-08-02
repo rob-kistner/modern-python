@@ -60,3 +60,10 @@ Import with: `from printutils import *`
     Print a comment (can be multiple lines) with possible line insets,
     then a separator line with or without inset as the length,
     then the expected text with possible line insets
+
+
+## Python Games
+
+During coding exercise 81: Roleplaying Game Classes, he mentioned this link of games make with Python…cool!
+
+> https://wiki.python.org/moin/PythonGames

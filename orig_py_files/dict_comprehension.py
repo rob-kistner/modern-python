@@ -49,7 +49,7 @@ jprint(nums)
 banner("Only cap a key if it matches a certain key")
 # ----------------------------------------
 yelling_instructor = {
-    (k.upper() if k is "color" else k):v.upper() 
+    (k.upper() if k == "color" else k):v.upper() 
     for k, v in instructor.items()
     }
 jprint(yelling_instructor)
