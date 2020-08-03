@@ -3,7 +3,7 @@ from modules.printutils import *
 big_banner("""
     OOPS: Properties
     ----------------
-    Prevents users from doing dump things
+    Prevents users from doing dumb things
     to class members.
 
     NOTE: the _variable standard is largely based 
