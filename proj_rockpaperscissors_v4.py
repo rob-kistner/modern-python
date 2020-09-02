@@ -48,32 +48,32 @@ while player_wins < num_wins and computer_wins < num_wins:
 
     # test tie
     if player == computer:
-        printsurround('It\'s a tie!')
+        banner('It\'s a tie!')
     # test logic
     elif player == 'rock':
         if computer == 'scissors':
-            printsurround('Player 1 wins!')
+            banner('Player 1 wins!')
             player_wins += 1
         elif computer == 'paper':
-            printsurround('Computer wins!')
+            banner('Computer wins!')
             computer_wins += 1
     elif player == 'paper':
         if computer == 'rock':
-            printsurround('Player 1 wins!')
+            banner('Player 1 wins!')
             player_wins += 1
         if computer == 'scissors':
-            printsurround('Computer wins!')
+            banner('Computer wins!')
             computer_wins += 1
     elif player == 'scissors':
         if computer == 'rock':
-            printsurround('Computer wins!')
+            banner('Computer wins!')
             computer_wins += 1
         if computer == 'paper':
-            printsurround('Player 1 wins!')
+            banner('Player 1 wins!')
             player_wins += 1
     # error catch
     else:
-        printsurround('Something went wrong')
+        banner('Something went wrong')
     sep()
 
 # final win report

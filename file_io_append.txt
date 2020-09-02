@@ -1,0 +1,4 @@
+Added usin:)r+.
+text file.
+Here's a new line appended to the file.
+Adding a line before all the other content.
